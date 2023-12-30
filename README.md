@@ -17,18 +17,19 @@ Azure Functionsにデプロイする環境の状態をチェックする
 #### 実行手順
 デプロイするディレクトリのルートでvenvを起動させた状態でTerminalにてコマンドを実行する
 ```Shell
-curl -sf https://raw.githubusercontent.com/Taichi-Ibi/azfunc-healthscan/main/pip-remake.sh | sh -s
+curl -sf https://raw.githubusercontent.com/Taichi-Ibi/azfunc-healthscan/main/pip-remake.sh | sh
 ```  
 #### その他
 - コマンド実行後に生成されるuninstall.txtは不要であれば削除してよい
 ### 2. requirements.txt内の依存関係を確認
-hoge
+requirements.txtに記載されていない依存パッケージを表示する
 #### 処理手順
-- hoge
+- 全パッケージに対して```pip show```を実行して依存パッケージを取得する
+- requirements.txtに記載されていない依存パッケージを表示する
 #### 実行手順
-hoge
+デプロイするディレクトリのルートでvenvを起動させた状態でTerminalにてコマンドを実行する
 ```Shell
-curl https://raw.githubusercontent.com/Taichi-Ibi/azfunc-healthscan/main/pip-deps-check.py | python
+curl -sf https://raw.githubusercontent.com/Taichi-Ibi/azfunc-healthscan/main/pip-deps-check.sh | sh
 ```  
 #### その他
-- コマンド実行後に生成されるuninstall.txtは不要であれば削除してよい
+- requirements.txtに全てのパッケージを記載する必要はないが、
