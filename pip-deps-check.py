@@ -27,7 +27,7 @@ def get_package_dependencies(package):
             return set(match.group(1).split(", "))
     except subprocess.CalledProcessError:
         print()
-        logging.error(f"パッケージ '{package}' が見つかりませんでした。インストールされているか確認してください。")
+        logging.error(f"エラー！ パッケージ '{package}' が見つかりませんでした。インストールされているか確認してください。")
         exit(1)
     return set()
 

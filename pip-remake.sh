@@ -1,15 +1,15 @@
 #!/bin/sh
 
 # 仮想環境がアクティブかどうかを確認
-if [ -z "$VIRTUAL_ENV" ]; then
+if [ ! -f "requirements.txt" ]; then
     echo "エラー！ requirements.txtが見つかりません"
     exit 1
 fi
 
 # requirements.txtが存在するか確認
-if [ ! -f "requirements.txt" ]; then
+if [ -z "$VIRTUAL_ENV" ]; then
     echo "エラー！ venvがアクティブになっていません。"
-    exit 2
+    exit 1
 fi
 
 # packageをinstallし直す
