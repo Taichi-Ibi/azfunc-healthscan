@@ -20,7 +20,7 @@ Azure Functionsにデプロイする環境の状態をチェックする
 curl -sf https://raw.githubusercontent.com/Taichi-Ibi/azfunc-healthscan/main/pip-remake.sh | sh
 ```  
 #### その他
-- コマンド実行後に生成されるuninstall.txtは不要であれば削除してよい
+- コマンド実行後に生成されるuninstall.txtは.gitignoreに追記される。不要であれば削除してよい
 ### 2. requirements.txt内の依存関係を確認
 requirements.txtに記載されていない依存パッケージを表示する
 #### 処理手順
@@ -32,4 +32,4 @@ requirements.txtに記載されていない依存パッケージを表示する
 curl -sf https://raw.githubusercontent.com/Taichi-Ibi/azfunc-healthscan/main/pip-deps-check.sh | sh
 ```  
 #### その他
-- requirements.txtに全てのパッケージを記載する必要はないが、
+- requirements.txtに全てのパッケージを記載する必要はないが、Azure Functionsでは依存パッケージを明示的にインストール必要な場合がある
