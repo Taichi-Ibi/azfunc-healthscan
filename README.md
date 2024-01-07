@@ -17,7 +17,7 @@ Azure Functionsにデプロイする環境の状態をチェックする
 #### 実行手順
 デプロイするディレクトリのルートでvenvを起動させた状態でTerminalにてコマンドを実行する
 ```Shell
-curl -sf https://raw.githubusercontent.com/Taichi-Ibi/azfunc-healthscan/main/pip-remake.sh | sh
+curl -sf https://raw.githubusercontent.com/Taichi-Ibi/pipclean/main/pip-remake.sh | sh
 ```  
 #### その他
 - コマンド実行後に生成されるuninstall.txtは.gitignoreに追記される。不要であれば削除してよい
@@ -29,7 +29,7 @@ requirements.txtに記載されていない依存パッケージを表示する
 #### 実行手順
 デプロイするディレクトリのルートでvenvを起動させた状態でTerminalにてコマンドを実行する
 ```Shell
-curl -sf https://raw.githubusercontent.com/Taichi-Ibi/azfunc-healthscan/main/pip-deps-check.sh | sh
+curl -sf https://raw.githubusercontent.com/Taichi-Ibi/pipclean/main/pip-deps-check.sh | sh
 ```  
 #### その他
 - requirements.txtに全てのパッケージを記載する必要はないが、Azure Functionsでは依存パッケージを明示的にインストール必要な場合がある
