@@ -16,3 +16,6 @@ fi
 pip freeze > uninstall.txt
 pip uninstall -y -r uninstall.txt
 pip install -r requirements.txt
+
+# uninstall.txtを.gitignoreに追加
+echo '\n# pip-remake前のrequirements.txtを記載したファイル\nuninstall.txt' >> .gitignore
